@@ -9,6 +9,7 @@ public class DragAndPlace : MonoBehaviour
 
 
     private Vector3 offset;
+    [SerializeField] GameObject starInPlaceEffect;
 
     private void OnMouseDown()
     {
@@ -63,6 +64,8 @@ public class DragAndPlace : MonoBehaviour
 
         isDragging = false;
         this.GetComponent<StarMovement>().farwordSpeed = 0f;
+        GameObject inPlaceEffect = Instantiate(starInPlaceEffect, transform.position,Quaternion.identity);
+        Destroy(inPlaceEffect, 2);
         yield return new WaitForSeconds(duration);
         isInPlace= false;
         this.GetComponent<StarMovement>().farwordSpeed = 2f;

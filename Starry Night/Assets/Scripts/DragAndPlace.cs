@@ -10,7 +10,9 @@ public class DragAndPlace : MonoBehaviour
 
     private Vector3 offset;
     [SerializeField] GameObject starInPlaceEffect;
+    [SerializeField] float pauseStar;
 
+   
     private void OnMouseDown()
     {
         isDragging = true;
@@ -33,7 +35,7 @@ public class DragAndPlace : MonoBehaviour
                     transform.position = collider.transform.position;
 
                     // Stop the movement for 10 seconds (you can adjust the duration as needed)
-                    StartCoroutine(PauseMovement(12f));
+                    StartCoroutine(PauseMovement(pauseStar));
                     isInPlace= true;
 
                     break;

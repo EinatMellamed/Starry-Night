@@ -4,27 +4,66 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] List<DragAndPlace> stars = new List<DragAndPlace>();
+    [SerializeField] List<GameObject> stars = new List<GameObject>();
+    [SerializeField] List<DragAndPlace> starsInPlace = new List<DragAndPlace>();
+    
+
+    [SerializeField] GameObject winEffect;
+    [SerializeField] GameObject paintingWithOutStars;
+   
     [SerializeField] bool gameIsWon;
+
+    private void Start()
+    {
+       for(int i = 0; i < stars.Count; i++)
+        {
+          var dragAndPlace = stars[i].GetComponent<DragAndPlace>();
+            starsInPlace.Add(dragAndPlace);
+        }
+
+        paintingWithOutStars.SetActive(true);
+    }
     void Update()
     {
         if (gameIsWon) return;
         if (AllStarsInPlace())
         {
             gameIsWon = true;
-            Time.timeScale = 0f;
+            WinEffect();
+          //  Time.timeScale = 0f;
             Debug.Log("Congratulations! You won the game!");
         }
     }
     public bool AllStarsInPlace()
     {
-        foreach (DragAndPlace star in stars)
+        foreach (DragAndPlace starInPlace in starsInPlace)
         {
-            if (!star.isInPlace)
+            if (!starInPlace.isInPlace)
             {
                 return false;
             }
         }
         return true;
+    }
+
+    public void WinEffect()
+    {
+        paintingWithOutStars.SetActive(false);
+        foreach (GameObject star in stars)
+        {
+
+          
+           GameObject starWinEffect = Instantiate(winEffect, star.transform.position, Quaternion.identity);
+            Destroy(starWinEffect, 4);
+            star.gameObject.SetActive(false);
+
+        }
+
+       
+
+       
+
+       
+
     }
 }

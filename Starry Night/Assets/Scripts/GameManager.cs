@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> stars = new List<GameObject>();
     [SerializeField] List<DragAndPlace> starsInPlace = new List<DragAndPlace>();
+   
     
 
     [SerializeField] GameObject winEffect;
@@ -15,7 +16,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-       for(int i = 0; i < stars.Count; i++)
+       
+       for (int i = 0; i < stars.Count; i++)
         {
           var dragAndPlace = stars[i].GetComponent<DragAndPlace>();
             starsInPlace.Add(dragAndPlace);
@@ -59,11 +61,17 @@ public class GameManager : MonoBehaviour
 
         }
 
-       
+    }
 
-       
+    public void ActivateStars()
+    {
+        foreach (GameObject star in stars)
+        {
 
-       
+            star.gameObject.SetActive(true);
+
+        }
+
 
     }
 }

@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
 
           
            GameObject starWinEffect = Instantiate(winEffect, star.transform.position, Quaternion.identity);
-            Destroy(starWinEffect, 4);
+            Destroy(starWinEffect, 6);
             star.gameObject.SetActive(false);
 
         }

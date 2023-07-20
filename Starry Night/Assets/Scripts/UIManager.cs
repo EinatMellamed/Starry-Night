@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -60,6 +62,7 @@ public class UIManager : MonoBehaviour
     public void StartGame()
     {
         CloseAllUIPanels();
+        UIPanels[5].SetActive(true);
         gameManager.ActivateStars();
 
     }
@@ -121,5 +124,35 @@ public class UIManager : MonoBehaviour
 
         CloseAllUIPanels();
         UIPanels[3].SetActive(true);
+    }
+
+    public void OpenMainMenuPanel()
+    {
+
+        CloseAllUIPanels();
+        UIPanels[4].SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void QuitApplication()
+    {
+
+        Application.Quit();
+
+    }
+
+    public void ResumeGame()
+    {
+        CloseAllUIPanels();
+        UIPanels[5].SetActive(true);
+        Time.timeScale = 1f;
+
+    }
+
+    public void StartNewGame()
+    {
+
+        SceneManager.LoadScene(0);
+
     }
 }

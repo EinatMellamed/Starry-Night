@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> UIPanels = new List<GameObject>();
     [SerializeField] List<GameObject> introText = new List<GameObject>();
+    [SerializeField] List<GameObject> backgroundElements = new List<GameObject>();
     [SerializeField] GameManager gameManager;
 
     private int currentTextIndex;
@@ -105,8 +106,20 @@ public class UIManager : MonoBehaviour
 
     public void OpenMiddlePanel()
     {
+        foreach (GameObject element in backgroundElements)
+        {
+
+            element.SetActive(false);
+
+
+        }
+        CloseAllUIPanels();
+        UIPanels[2].SetActive(true);
+    }
+    public void OpenWinPanel()
+    {
 
         CloseAllUIPanels();
-        introText[2].SetActive(false);
+        UIPanels[3].SetActive(true);
     }
 }

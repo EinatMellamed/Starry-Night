@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject winEffect;
     [SerializeField] GameObject paintingWithOutStars;
+    [SerializeField] UIManager uiManager;
    
     [SerializeField] bool gameIsWon;
 
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
         }
 
         paintingWithOutStars.SetActive(true);
+        uiManager = FindObjectOfType<UIManager>();
     }
     void Update()
     {
@@ -32,8 +34,7 @@ public class GameManager : MonoBehaviour
         {
             gameIsWon = true;
             WinEffect();
-          //  Time.timeScale = 0f;
-            Debug.Log("Congratulations! You won the game!");
+            uiManager.OpenWinPanel();
         }
     }
     public bool AllStarsInPlace()

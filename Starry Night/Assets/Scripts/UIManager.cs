@@ -12,6 +12,8 @@ public class UIManager : MonoBehaviour
     private int currentTextIndex;
     [SerializeField] GameObject currectIntroText;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,8 +77,9 @@ public class UIManager : MonoBehaviour
    
         if(!currectIntroText)
         {
-            currentTextIndex = 0;
-            currectIntroText = introText[0];
+            currentTextIndex = 1;
+            currectIntroText = introText[1];
+            introText[0].SetActive(false);
 
         }
 
@@ -98,5 +101,12 @@ public class UIManager : MonoBehaviour
 
 
 
+    }
+
+    public void OpenMiddlePanel()
+    {
+
+        CloseAllUIPanels();
+        introText[2].SetActive(false);
     }
 }

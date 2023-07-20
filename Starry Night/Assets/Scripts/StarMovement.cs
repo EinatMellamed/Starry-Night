@@ -9,23 +9,27 @@ public class StarMovement : MonoBehaviour
     public RaycastHit2D hit;
     public Rigidbody2D rb;
 
-   public float farwordSpeed = 5f;
+    public float farwordSpeed = 5f;
     [SerializeField] float rotationSpeed = 2f;
 
     [SerializeField] float multiplier = -1f;
-    [SerializeField] float timer =5f;
-  
-    [SerializeField] float hitWallRotation = 140f;
-    [SerializeField] float moveDitectionRange =5f;
-    
+    [SerializeField] float timer = 5f;
 
+    [SerializeField] float hitWallRotation = 140f;
+    [SerializeField] float moveDitectionRange = 5f;
+    public UIManager uiManager;
+
+    public static int foundedStars;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        farwordSpeed = 0f;
         rb = GetComponent<Rigidbody2D>();
         timer = 5;
-   
+        uiManager = FindObjectOfType<UIManager>();
+
     }
 
     // Update is called once per frame
@@ -36,15 +40,15 @@ public class StarMovement : MonoBehaviour
         transform.Translate(Vector3.up * farwordSpeed * Time.deltaTime);
         transform.Rotate(0, 0, rotationSpeed);
 
-        if(timer <= 0)
+        if (timer <= 0)
         {
             Debug.Log("timesup");
 
             ChangeAngle();
-            timer =5;
+            timer = 5;
         }
 
-       
+
 
     }
 
@@ -53,17 +57,17 @@ public class StarMovement : MonoBehaviour
 
         hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.up), 0.4f);
 
-        if(hit.collider != null && hit.collider.tag=="Wall")
+        if (hit.collider != null && hit.collider.tag == "Wall")
         {
 
 
-           Debug.Log("raycastWorked");
+            Debug.Log("raycastWorked");
             transform.Rotate(0, 0, transform.rotation.z + hitWallRotation);
 
         }
-        
-      
-        
+
+
+
 
     }
 
@@ -75,7 +79,7 @@ public class StarMovement : MonoBehaviour
     }
 
 
-   private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.name == "hit" || collision.collider.name == "Star")
         {
@@ -85,24 +89,36 @@ public class StarMovement : MonoBehaviour
 
         }
         timer = 5;
-      transform.Rotate(0, 0,transform.rotation.z + hitWallRotation);
-       
+        transform.Rotate(0, 0, transform.rotation.z + hitWallRotation);
+
 
     }
 
-  
+
 
     private void ChangeAngle()
     {
-       
-        
-            
-            rotationSpeed = rotationSpeed * multiplier;
-            
 
 
 
-        
+        rotationSpeed = rotationSpeed * multiplier;
+
+
+
+
+
+    }
+
+    private void OnMouseDown()
+    {
+        farwordSpeed = 1f;
+        foundedStars++;
+
+        if(foundedStars == 11)
+        {
+            uiManager.OpenMiddlePanel();
+
+        }
     }
 }
 

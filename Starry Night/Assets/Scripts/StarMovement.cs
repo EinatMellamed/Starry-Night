@@ -17,7 +17,7 @@ public class StarMovement : MonoBehaviour
 
     [SerializeField] float hitWallRotation = 140f;
     [SerializeField] float moveDitectionRange = 5f;
-    [SerializeField] List<GameObject> backgroundElements= new List<GameObject>();   
+    
     public UIManager uiManager;
 
     public static int foundedStars;
@@ -119,13 +119,7 @@ public class StarMovement : MonoBehaviour
         {
             Debug.Log("counted 11 stars");
             uiManager.OpenMiddlePanel();
-            foreach(GameObject element in backgroundElements)
-            {
-
-                element.SetActive(false);
-
-
-            }
+           
         }
     }
 }

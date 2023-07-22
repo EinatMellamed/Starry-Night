@@ -1,9 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+
+    [Header("Audio Manager")]
+    public MusicAndSFX[] musicSounds, sfxSounds;
+    public AudioSource musicSource, sfxSource;
+
     [SerializeField] List<GameObject> stars = new List<GameObject>();
     [SerializeField] List<DragAndPlace> starsInPlace = new List<DragAndPlace>();
    
@@ -15,6 +22,18 @@ public class GameManager : MonoBehaviour
    
     [SerializeField] bool gameIsWon;
 
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
     private void Start()
     {
        
@@ -75,4 +94,48 @@ public class GameManager : MonoBehaviour
 
 
     }
+    public void PlayMusic(string name)
+    {
+        MusicAndSFX s = Array.Find(musicSounds, x => x.name == name);
+
+        if (s == null)
+        {
+            Debug.Log("Sound not found");
+        }
+        else
+        {
+            musicSource.clip = s.clip;
+            musicSource.Play();
+        }
+    }
+
+    public void PlaySFX(string name)
+    {
+        MusicAndSFX s = Array.Find(sfxSounds, x => x.name == name);
+
+        if (s == null)
+        {
+            Debug.Log("Sound not found");
+        }
+        else
+        {
+            sfxSource.PlayOneShot(s.clip);
+        }
+    }
+
+    public void StopPlaySFX(string name)
+    {
+        MusicAndSFX s = Array.Find(sfxSounds, x => x.name == name);
+
+        if (s == null)
+        {
+            Debug.Log("Sound not found");
+        }
+        else
+        {
+            sfxSource.Stop();
+        }
+    }
+
+
 }

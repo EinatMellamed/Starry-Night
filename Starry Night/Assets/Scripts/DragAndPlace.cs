@@ -33,7 +33,7 @@ public class DragAndPlace : MonoBehaviour
                 {
                     // Snap the star into position
                     transform.position = collider.transform.position;
-
+                    
                     // Stop the movement for 10 seconds (you can adjust the duration as needed)
                     StartCoroutine(PauseMovement(pauseStar));
                     isInPlace= true;
@@ -66,6 +66,7 @@ public class DragAndPlace : MonoBehaviour
 
         isDragging = false;
         this.GetComponent<StarMovement>().farwordSpeed = 0f;
+        GameManager.Instance.PlaySFX("StarInPlace");
         GameObject inPlaceEffect = Instantiate(starInPlaceEffect, transform.position,Quaternion.identity);
         Destroy(inPlaceEffect, 2);
         yield return new WaitForSeconds(duration);

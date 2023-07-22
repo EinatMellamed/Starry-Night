@@ -20,6 +20,8 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.Instance.PlayMusic("IntroTheme"); 
+        GameManager.Instance.musicSource.volume =0.5f;
         gameManager = FindObjectOfType<GameManager>();
         CloseAllUIPanels();
         CloseAllIntroTexts();
@@ -64,6 +66,7 @@ public class UIManager : MonoBehaviour
         CloseAllUIPanels();
         UIPanels[5].SetActive(true);
         gameManager.ActivateStars();
+        GameManager.Instance.PlayMusic("GameTheme");
 
     }
     public void CloseAllIntroTexts()
@@ -124,6 +127,8 @@ public class UIManager : MonoBehaviour
 
         CloseAllUIPanels();
         UIPanels[3].SetActive(true);
+        GameManager.Instance.PlayMusic("VictoryTheme");
+        GameManager.Instance.sfxSource.loop = false;
     }
 
     public void OpenMainMenuPanel()
@@ -132,6 +137,7 @@ public class UIManager : MonoBehaviour
         CloseAllUIPanels();
         UIPanels[4].SetActive(true);
         Time.timeScale = 0f;
+        GameManager.Instance.musicSource.volume = 0.2f;
     }
 
     public void QuitApplication()
@@ -146,6 +152,7 @@ public class UIManager : MonoBehaviour
         CloseAllUIPanels();
         UIPanels[5].SetActive(true);
         Time.timeScale = 1f;
+        GameManager.Instance.musicSource.volume = 0.5f;
 
     }
 

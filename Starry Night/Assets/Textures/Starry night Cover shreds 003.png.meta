@@ -1,0 +1,1224 @@
+fileFormatVersion: 2
+guid: e2b9b776d06a11c449787596fd9d5bd9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 988
+        width: 148
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8818ec8bc15f97244b23d7179f5d4c8d
+      internalID: 929811817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_1
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 966
+        width: 82
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815d9420ba2fb0844a7935a7714e0c10
+      internalID: 163210400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_2
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 1014
+        width: 62
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70e6ebfca9912f4b97fb7474675dd06
+      internalID: -927928803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_3
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 977
+        width: 180
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523de38df61e95f4497aa7383040abdd
+      internalID: 1540358585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_4
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 950
+        width: 70
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7309312dd57e3f4c9a2d9143692e635
+      internalID: -73845020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_5
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 1038
+        width: 102
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e2e1963f2bfdb44e95aefc340587739
+      internalID: -1766713209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_6
+      rect:
+        serializedVersion: 2
+        x: 1878
+        y: 963
+        width: 30
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b52028178b10b4bb07b2dc6c6c69d9
+      internalID: -168102781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_7
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 912
+        width: 92
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32707a270246a8249a85a68be11df167
+      internalID: -2015882508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_8
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 903
+        width: 49
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e09e82f69268745ad595f7d14fbdc3
+      internalID: 2128378567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_9
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 869
+        width: 83
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23013fce9d93f4c4094befb869605cf6
+      internalID: 413768429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_10
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 813
+        width: 49
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bafc813b43306244bf43e563a431b55
+      internalID: 13065499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_11
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 900
+        width: 129
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b5481cfe7552349868195d34d6fe90
+      internalID: -1802015680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_12
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 883
+        width: 163
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f98f39c43351b45bf12ef47642d1ee
+      internalID: -1285184051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_13
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 845
+        width: 99
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e84579606a82de49af08fc0da79542a
+      internalID: -1727025224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_14
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 768
+        width: 82
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c7eb33f7eff954681735cd8fc61052
+      internalID: -1340566546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_15
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 789
+        width: 142
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7073f1b23d543ce41b40d38e30cff837
+      internalID: 118338694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_16
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 750
+        width: 24
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc679a6ce0df5044a5bc579dfadb548
+      internalID: 1260238463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_17
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 719
+        width: 141
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980a156863f91c740b6a2a1bbe63fb87
+      internalID: 1772322816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_18
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 685
+        width: 46
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8192a17a96829e945b91d0d38674bee9
+      internalID: 863920992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_19
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 690
+        width: 124
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593cc93d12cc7a04bae17aaa8a4705ce
+      internalID: 1486844215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_20
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 718
+        width: 151
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695b194f74b373c4d87df2d5af15446b
+      internalID: 1559893138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_21
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 749
+        width: 76
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade7507e74895c140a269395b950ed55
+      internalID: 493517222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_22
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 706
+        width: 28
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73fc5d87dd6f0bd43af4bfd529f35f02
+      internalID: 242754571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_23
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 558
+        width: 75
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868f88893cda43844b518784f93341ca
+      internalID: 622879456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_24
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 622
+        width: 244
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962c7682d91f3194bbd933af4bf71236
+      internalID: -700309053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_25
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 674
+        width: 152
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1cd9057dfd7e37488b9fad179517f92
+      internalID: 1814340497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_26
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 562
+        width: 167
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9fa1ed390e7b548a82f9d806a87561
+      internalID: 241505653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_27
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 636
+        width: 160
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c80695d8d77d44cb79be85a6dab1d6
+      internalID: 478574415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_28
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 498
+        width: 91
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db15e8dbf0f1f1d44bacf90d91e59062
+      internalID: 342112955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_29
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 607
+        width: 134
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1abc0c4cebd6dc4458517cd607d01bd3
+      internalID: 1882123066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_30
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 378
+        width: 152
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f930864568ba6749bed3964c164abf7
+      internalID: -1291172655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_31
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 439
+        width: 95
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe7485bca0d0154181ad30a3d6c54ab
+      internalID: -540972189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_32
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 410
+        width: 158
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f6e9f1ed1c7644ab47c8ac41b3b986
+      internalID: -556874267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_33
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 403
+        width: 32
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e00eb74bede0d4448c929c0c96f5f4c
+      internalID: -1329496424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_34
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 378
+        width: 66
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15dcaf31270434543b2d92b4aad37f3f
+      internalID: 1194401658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_35
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 309
+        width: 139
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ef016e26da4594c8c18e4edba429bc
+      internalID: -1801168179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_36
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 287
+        width: 65
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f2b1b4fe6c7b947b4c7c3f452825ef
+      internalID: 544477376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_37
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 332
+        width: 59
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25df61eab0fac74890de8ead36b3f30
+      internalID: 235210558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_38
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 269
+        width: 139
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316fe033a6d92b94a99e218a8f40ea0e
+      internalID: 1454806143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_39
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 331
+        width: 42
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dfa5c50e2e80ad43a8417b0dbc567cc
+      internalID: 1359122329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_40
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 132
+        width: 97
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1af1b1cfa9e054690895e062fe50c3
+      internalID: -1557730815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_41
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 228
+        width: 93
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f90789129b35c4a8b273372ff5a656
+      internalID: -775050265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_42
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 187
+        width: 57
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4fc638d0cf3297429b56d05b7571fce
+      internalID: 757790621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_43
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 190
+        width: 63
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc59c7d72961cce43afebc7e762c3409
+      internalID: 987694390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_44
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 19
+        width: 48
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcddb8d6e32517a4c8e7ebabb17bb96a
+      internalID: -1428340506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_45
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 138
+        width: 131
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219bcfc347272394bae3930376327d5c
+      internalID: 182139438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_46
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 35
+        width: 39
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822e885ec44e16b45a05eb944b7b90ac
+      internalID: 1939468969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_47
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 30
+        width: 56
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7967b2e4d0af6489b39e5ac1790a00
+      internalID: -1239102520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starry night Cover shreds 003_48
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 51
+        width: 108
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2646e287725c57449bbfa3b014a93822
+      internalID: -1253625535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Starry night Cover shreds 003_45: 182139438
+      Starry night Cover shreds 003_10: 13065499
+      Starry night Cover shreds 003_3: 1540358585
+      Starry night Cover shreds 003_30: -1291172655
+      Starry night Cover shreds 003_26: 241505653
+      Starry night Cover shreds 003_5: -1766713209
+      Starry night Cover shreds 003_48: -1253625535
+      Starry night Cover shreds 003_27: 478574415
+      Starry night Cover shreds 003_29: 1882123066
+      Starry night Cover shreds 003_0: 929811817
+      Starry night Cover shreds 003_16: 1260238463
+      Starry night Cover shreds 003_9: 413768429
+      Starry night Cover shreds 003_47: -1239102520
+      Starry night Cover shreds 003_14: -1340566546
+      Starry night Cover shreds 003_44: -1428340506
+      Starry night Cover shreds 003_21: 493517222
+      Starry night Cover shreds 003_43: 987694390
+      Starry night Cover shreds 003_2: -927928803
+      Starry night Cover shreds 003_40: -1557730815
+      Starry night Cover shreds 003_18: 863920992
+      Starry night Cover shreds 003_41: -775050265
+      Starry night Cover shreds 003_35: -1801168179
+      Starry night Cover shreds 003_23: 622879456
+      Starry night Cover shreds 003_39: 1359122329
+      Starry night Cover shreds 003_11: -1802015680
+      Starry night Cover shreds 003_13: -1727025224
+      Starry night Cover shreds 003_15: 118338694
+      Starry night Cover shreds 003_37: 235210558
+      Starry night Cover shreds 003_20: 1559893138
+      Starry night Cover shreds 003_22: 242754571
+      Starry night Cover shreds 003_38: 1454806143
+      Starry night Cover shreds 003_4: -73845020
+      Starry night Cover shreds 003_33: -1329496424
+      Starry night Cover shreds 003_19: 1486844215
+      Starry night Cover shreds 003_24: -700309053
+      Starry night Cover shreds 003_36: 544477376
+      Starry night Cover shreds 003_42: 757790621
+      Starry night Cover shreds 003_1: 163210400
+      Starry night Cover shreds 003_6: -168102781
+      Starry night Cover shreds 003_25: 1814340497
+      Starry night Cover shreds 003_7: -2015882508
+      Starry night Cover shreds 003_31: -540972189
+      Starry night Cover shreds 003_17: 1772322816
+      Starry night Cover shreds 003_32: -556874267
+      Starry night Cover shreds 003_12: -1285184051
+      Starry night Cover shreds 003_28: 342112955
+      Starry night Cover shreds 003_34: 1194401658
+      Starry night Cover shreds 003_46: 1939468969
+      Starry night Cover shreds 003_8: 2128378567
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

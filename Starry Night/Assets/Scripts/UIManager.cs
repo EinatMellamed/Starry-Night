@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] List<GameObject> introText = new List<GameObject>();
     [SerializeField] List<GameObject> backgroundElements = new List<GameObject>();
     [SerializeField] GameManager gameManager;
+    [SerializeField] Animator animator;
 
     private int currentTextIndex;
     [SerializeField] GameObject currectIntroText;
@@ -20,6 +22,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       animator = UIPanels[0].GetComponent<Animator>();
         GameManager.Instance.PlayMusic("IntroTheme"); 
         GameManager.Instance.musicSource.volume =0.5f;
         gameManager = FindObjectOfType<GameManager>();
@@ -45,13 +48,16 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
-
-    public void OpenInstructionPanel1()
+ 
+    public async void OpenInstructionPanel1()
     {
-
+        animator.SetTrigger("ButtonClicked");
+        Debug.Log("triggered animation");
+       await Task.Delay(1000);
         CloseAllUIPanels();
         UIPanels[1].SetActive(true);
         Time.timeScale = 0f;
+       
     }
     public void OpenInstructionPanel2()
     {

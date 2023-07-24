@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -13,15 +14,16 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] List<GameObject> stars = new List<GameObject>();
     [SerializeField] List<DragAndPlace> starsInPlace = new List<DragAndPlace>();
-   
-    
+    [SerializeField] GameObject wind;
+
 
     [SerializeField] GameObject winEffect;
     [SerializeField] GameObject paintingWithOutStars;
     [SerializeField] UIManager uiManager;
-   
-    [SerializeField] bool gameIsWon;
 
+    [SerializeField] bool gameIsWon;
+    [SerializeField] bool firstWind;
+    [SerializeField] float timer = 60f;
 
     private void Awake()
     {
@@ -33,28 +35,35 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+        firstWind = true;
     }
     private void Start()
     {
-       
-       for (int i = 0; i < stars.Count; i++)
+
+        for (int i = 0; i < stars.Count; i++)
         {
-          var dragAndPlace = stars[i].GetComponent<DragAndPlace>();
+            var dragAndPlace = stars[i].GetComponent<DragAndPlace>();
             starsInPlace.Add(dragAndPlace);
         }
 
         paintingWithOutStars.SetActive(true);
         uiManager = FindObjectOfType<UIManager>();
+
+
     }
     void Update()
     {
+        timer -= Time.deltaTime;
+        if (timer <= 0) ActivateWind();
         if (gameIsWon) return;
         if (AllStarsInPlace())
         {
             gameIsWon = true;
             WinEffect();
             uiManager.OpenWinPanel();
+            timer = 1f;
         }
+
     }
     public bool AllStarsInPlace()
     {
@@ -74,8 +83,8 @@ public class GameManager : MonoBehaviour
         foreach (GameObject star in stars)
         {
 
-          
-           GameObject starWinEffect = Instantiate(winEffect, star.transform.position, Quaternion.identity);
+
+            GameObject starWinEffect = Instantiate(winEffect, star.transform.position, Quaternion.identity);
             Destroy(starWinEffect, 6);
             star.gameObject.SetActive(false);
 
@@ -137,5 +146,32 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public async void ActivateWind()
+    {
 
+            wind.SetActive(true);
+            foreach (GameObject star in stars)
+            {
+
+                star.GetComponent<StarMovement>().farwordSpeed = 10f;
+
+            }
+
+            await Task.Delay(3000);
+            wind.SetActive(false);
+        foreach (GameObject star in stars)
+        {
+
+            star.GetComponent<StarMovement>().farwordSpeed = 2f;
+
+        }
+        timer = 45f;
+       if(firstWind)
+        {
+            uiManager.OpenWindPanel();
+            firstWind= false;
+
+        }
+
+    }
 }

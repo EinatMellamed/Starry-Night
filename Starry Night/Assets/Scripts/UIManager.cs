@@ -168,4 +168,12 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(0);
 
     }
+
+    public void OpenWindPanel()
+    {
+
+        CloseAllUIPanels();
+        UIPanels[6].SetActive(true);
+
+    }
 }

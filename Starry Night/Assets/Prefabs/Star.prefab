@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 7542221023964325804}
   - component: {fileID: 1544083308305492911}
   - component: {fileID: 1827070228473747181}
+  - component: {fileID: 6664490055643856698}
   m_Layer: 0
   m_Name: Star
   m_TagString: Star
@@ -245,7 +246,6 @@ MonoBehaviour:
   timer: 5
   hitWallRotation: 180
   moveDitectionRange: 2
-  backgroundElements: []
   uiManager: {fileID: 0}
 --- !u!58 &1544083308305492911
 CircleCollider2D:
@@ -278,3 +278,23 @@ MonoBehaviour:
   isInPlace: 0
   starInPlaceEffect: {fileID: 8041846498237561668, guid: a332e9d8f8bf8a049934fb974b16c84d, type: 3}
   pauseStar: 20
+--- !u!95 &6664490055643856698
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407042358175313010}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9089cd6f5f0555f48b3473aa15603e24, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

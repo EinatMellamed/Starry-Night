@@ -1806,12 +1806,14 @@ MonoBehaviour:
   - {fileID: 292954728}
   starsInPlace: []
   wind: {fileID: 295418651}
+  moon: {fileID: 1901298244}
   winEffect: {fileID: 8041846498237561668, guid: 94327051719039a45bf5d011d44dc167, type: 3}
   paintingWithOutStars: {fileID: 1657881156}
   uiManager: {fileID: 0}
   gameIsWon: 0
   firstWind: 0
-  timer: 30
+  moonIsTouched: 0
+  timer: 25
 --- !u!4 &422136612
 Transform:
   m_ObjectHideFlags: 0
@@ -7178,6 +7180,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6958526528266050272, guid: a0c9daa8b6434c6418f721268822cbb2, type: 3}
   m_PrefabInstance: {fileID: 1177054127}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1901298243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1901298246}
+  - component: {fileID: 1901298245}
+  - component: {fileID: 1901298244}
+  m_Layer: 0
+  m_Name: Moon holding point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1901298244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901298243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8804c97cdd2e5f84f978f394a877ac93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchMoon: 0
+--- !u!58 &1901298245
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901298243}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.21270537}
+  serializedVersion: 2
+  m_Radius: 1.6432898
+--- !u!4 &1901298246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901298243}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.8, y: 6.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1914090618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9096,6 +9160,10 @@ PrefabInstance:
     - target: {fileID: 1946910637086169628, guid: 1fbf027c102687944b2742ecb80af40a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2073124708326685787, guid: 1fbf027c102687944b2742ecb80af40a, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2805719752057508543, guid: 1fbf027c102687944b2742ecb80af40a, type: 3}
       propertyPath: m_Color.a

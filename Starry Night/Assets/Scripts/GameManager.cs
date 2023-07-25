@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] List<GameObject> stars = new List<GameObject>();
     [SerializeField] List<DragAndPlace> starsInPlace = new List<DragAndPlace>();
     [SerializeField] GameObject wind;
-
+    [SerializeField] MoonScript moon;
 
     [SerializeField] GameObject winEffect;
     [SerializeField] GameObject paintingWithOutStars;
@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] bool gameIsWon;
     [SerializeField] bool firstWind;
+    [SerializeField] bool moonIsTouched;
+
     [SerializeField] float timer = 60f;
 
     private void Awake()
@@ -148,28 +150,34 @@ public class GameManager : MonoBehaviour
 
     public async void ActivateWind()
     {
-
-            wind.SetActive(true);
+       
+        wind.SetActive(true);
+      
+        if (!moon.touchMoon)
+        {
             foreach (GameObject star in stars)
             {
-
                 star.GetComponent<StarMovement>().farwordSpeed = 10f;
-
+               
+              moonIsTouched= true;
             }
-
-            await Task.Delay(3000);
-            wind.SetActive(false);
-        foreach (GameObject star in stars)
+        }
+        await Task.Delay(3000);
+        wind.SetActive(false);
+        if (!moon.touchMoon && moonIsTouched)
         {
-
-            star.GetComponent<StarMovement>().farwordSpeed = 2f;
-
+            foreach (GameObject star in stars)
+            {
+               
+                star.GetComponent<StarMovement>().farwordSpeed = 2f;
+            }
+            moonIsTouched = false;
         }
         timer = 45f;
-       if(firstWind)
+        if (firstWind)
         {
             uiManager.OpenWindPanel();
-            firstWind= false;
+            firstWind = false;
 
         }
 

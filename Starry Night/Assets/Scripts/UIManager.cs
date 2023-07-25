@@ -174,6 +174,6 @@ public class UIManager : MonoBehaviour
 
         CloseAllUIPanels();
         UIPanels[6].SetActive(true);
-
+        GameManager.Instance.musicSource.loop = false;
     }
 }

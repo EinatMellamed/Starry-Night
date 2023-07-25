@@ -131,10 +131,10 @@ TextureImporter:
       name: tree parts_0
       rect:
         serializedVersion: 2
-        x: 186
-        y: 167
-        width: 60
-        height: 379
+        x: 72
+        y: 1008
+        width: 12
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +152,10 @@ TextureImporter:
       name: tree parts_1
       rect:
         serializedVersion: 2
-        x: 354
-        y: 276
-        width: 30
-        height: 6
+        x: 875
+        y: 766
+        width: 121
+        height: 272
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: tree parts_2
       rect:
         serializedVersion: 2
-        x: 377
-        y: 174
-        width: 74
-        height: 296
+        x: 1253
+        y: 798
+        width: 133
+        height: 250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: tree parts_3
       rect:
         serializedVersion: 2
-        x: 558
-        y: 199
-        width: 66
-        height: 246
+        x: 1613
+        y: 784
+        width: 215
+        height: 265
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: tree parts_4
       rect:
         serializedVersion: 2
-        x: 742
-        y: 178
-        width: 79
-        height: 296
+        x: 33
+        y: 591
+        width: 105
+        height: 416
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +236,10 @@ TextureImporter:
       name: tree parts_5
       rect:
         serializedVersion: 2
-        x: 822
-        y: 149
-        width: 25
-        height: 30
+        x: 263
+        y: 684
+        width: 85
+        height: 272
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,6 +249,195 @@ TextureImporter:
       bones: []
       spriteID: 8651273950f34844ea7e3948a6a6b954
       internalID: 207103473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree parts_6
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 689
+        width: 78
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069070154f789b945913ce13375a2ee0
+      internalID: 250991022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree parts_7
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 576
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b1033395ab0bc468cafcc396484602
+      internalID: -1318905425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree parts_8
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 0
+        width: 685
+        height: 685
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d038c9823b16d44ada005a13dd6489
+      internalID: 1186636886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree parts_9
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 564
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb92fa4d4b9c7f4eb5d7de4eeb61418
+      internalID: 1927440601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree parts_10
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 277
+        width: 24
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15958a8c2e0847241bf15ce9f3344c7f
+      internalID: 961278053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree parts_11
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 5
+        width: 93
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee7ef29392e39c48b2d5083ad3489cf
+      internalID: 13175039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree parts_12
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 52
+        width: 188
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7925eff7cba4ad44782444bf451a1c6d
+      internalID: -2117339672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree parts_13
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 14
+        width: 72
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd766ad271bf85a4d9fbef518a910d52
+      internalID: -1558456622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree parts_14
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 84
+        width: 30
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf21ce42e3abe4b4cba7801aaad19219
+      internalID: 469651031
       vertices: []
       indices: 
       edges: []
@@ -264,12 +453,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      tree parts_11: 13175039
       tree parts_0: 121491420
+      tree parts_13: -1558456622
+      tree parts_8: 1186636886
+      tree parts_9: 1927440601
+      tree parts_7: -1318905425
+      tree parts_10: 961278053
       tree parts_1: 1707549156
       tree parts_5: 207103473
       tree parts_3: -1642147960
       tree parts_2: 2000609850
       tree parts_4: 557712862
+      tree parts_12: -2117339672
+      tree parts_6: 250991022
+      tree parts_14: 469651031
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

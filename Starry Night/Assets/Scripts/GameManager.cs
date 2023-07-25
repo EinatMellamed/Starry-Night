@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject winEffect;
     [SerializeField] GameObject paintingWithOutStars;
     [SerializeField] UIManager uiManager;
+    [SerializeField] Animator treeAnim;
+
+
 
     [SerializeField] bool gameIsWon;
     [SerializeField] bool firstWind;
@@ -56,6 +59,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
+        if(timer < 4 && timer > 1) { treeAnim.SetBool("aboutToWind", true); }
         if (timer <= 0) ActivateWind();
         if (gameIsWon) return;
         if (AllStarsInPlace())
@@ -163,6 +167,7 @@ public class GameManager : MonoBehaviour
             }
         }
         await Task.Delay(3000);
+        treeAnim.SetBool("aboutToWind", false);
         wind.SetActive(false);
         if (!moon.touchMoon && moonIsTouched)
         {

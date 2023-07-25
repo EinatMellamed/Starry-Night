@@ -1814,7 +1814,7 @@ MonoBehaviour:
   gameIsWon: 0
   firstWind: 0
   moonIsTouched: 0
-  timer: 25
+  timer: 45
 --- !u!4 &422136612
 Transform:
   m_ObjectHideFlags: 0

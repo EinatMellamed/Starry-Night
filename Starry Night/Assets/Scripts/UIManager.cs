@@ -31,6 +31,11 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    private void Update()
+    {
+        
+    }
+
     public void CloseAllUIPanels()
     {
         foreach (GameObject panel in UIPanels)

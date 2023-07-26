@@ -20,7 +20,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         animator = UIPanels[0].GetComponent<Animator>();
-        GameManager.Instance.PlayMusic("IntroTheme");
+        GameManager.Instance.PlayMusic("CoverTheme");
         GameManager.Instance.musicSource.volume = 0.5f;
         GameManager.Instance.musicSource.loop = true;
         gameManager = FindObjectOfType<GameManager>();
@@ -49,6 +49,7 @@ public class UIManager : MonoBehaviour
     {
         animator.SetTrigger("ButtonClicked");
         await Task.Delay(1000);
+        GameManager.Instance.PlayMusic("IntroTheme");
         CloseAllUIPanels();
         UIPanels[1].SetActive(true);
         Time.timeScale = 0f;
@@ -123,6 +124,7 @@ public class UIManager : MonoBehaviour
         UIPanels[3].SetActive(true);
         GameManager.Instance.PlayMusic("VictoryTheme");
         GameManager.Instance.musicSource.loop = false;
+        Time.timeScale = 0f;
     }
 
     public void OpenMainMenuPanel()

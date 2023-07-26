@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour
         {
             treeAnim.SetBool("aboutToWind", true);
             moonAlart.SetActive(true);
+            PlaySFX("wind");
+            musicSource.volume = Mathf.Lerp(musicSource.volume, 0.3f, Time.deltaTime);
         }
         if (timer <= 0) ActivateWind();
         if (gameIsWon) return;
@@ -147,6 +149,7 @@ public class GameManager : MonoBehaviour
     {
         wind.SetActive(true);
         moonAlart.SetActive(false);
+       
         if (!moon.touchMoon)
         {
             foreach (GameObject star in stars)
@@ -159,7 +162,8 @@ public class GameManager : MonoBehaviour
         await Task.Delay(3000);
         treeAnim.SetBool("aboutToWind", false);
         wind.SetActive(false);
-       
+        musicSource.volume =Mathf.Lerp(musicSource.volume, 0.5f, Time.deltaTime);
+
         if (!moon.touchMoon && moonIsTouched)
         {
             foreach (GameObject star in stars)
@@ -169,7 +173,7 @@ public class GameManager : MonoBehaviour
             }
             moonIsTouched = false;
         }
-        timer = 45f;
+        timer = 10f;
         if (firstWind)
         {
             uiManager.OpenWindPanel();

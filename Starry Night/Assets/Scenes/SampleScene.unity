@@ -2034,9 +2034,11 @@ MonoBehaviour:
   - name: GameTheme
     clip: {fileID: 8300000, guid: 3e63af86ef491454c8a82c39080b1d84, type: 3}
   - name: IntroTheme
-    clip: {fileID: 8300000, guid: 3a49d986cf23d8d4a9875c38a031de7f, type: 3}
+    clip: {fileID: 8300000, guid: b381b5d1e19a3314caaba95abe3a4ff4, type: 3}
   - name: VictoryTheme
     clip: {fileID: 8300000, guid: c540e204e24c91149819c583e90adb20, type: 3}
+  - name: CoverTheme
+    clip: {fileID: 8300000, guid: 1b788c45381bc1549aa7077ba967d195, type: 3}
   sfxSounds:
   - name: 
     clip: {fileID: 0}
@@ -2044,6 +2046,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: a9ca0e15c3be6164e9810c4cf4eb9d44, type: 3}
   - name: SratFound
     clip: {fileID: 8300000, guid: 40f868feccae3214c84c042a953a2497, type: 3}
+  - name: wind
+    clip: {fileID: 8300000, guid: e420ab0a453010046b8871a9f01117ed, type: 3}
   musicSource: {fileID: 1540629755}
   sfxSource: {fileID: 1846618856}
   stars:
@@ -2069,7 +2073,7 @@ MonoBehaviour:
   gameIsWon: 0
   firstWind: 0
   moonIsTouched: 0
-  timer: 20
+  timer: 10
 --- !u!4 &422136612
 Transform:
   m_ObjectHideFlags: 0
@@ -6328,13 +6332,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 84
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -7635,7 +7639,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0

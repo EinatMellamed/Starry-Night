@@ -6,79 +6,52 @@ using UnityEngine;
 
 public class StarMovement : MonoBehaviour
 {
+    public UIManager uiManager;
     public RaycastHit2D hit;
     public Rigidbody2D rb;
-
     public float farwordSpeed = 5f;
-    [SerializeField] float rotationSpeed = 2f;
-
-    [SerializeField] float multiplier = -1f;
-    [SerializeField] float timer = 5f;
-
-    [SerializeField] float hitWallRotation = 140f;
-    [SerializeField] float moveDitectionRange = 5f;
-    
-    public UIManager uiManager;
-
     public static int foundedStars;
 
-    // Start is called before the first frame update
+    [SerializeField] float rotationSpeed = 2f;
+    [SerializeField] float multiplier = -1f;
+    [SerializeField] float timer = 5f;
+    [SerializeField] float hitWallRotation = 140f;
+    [SerializeField] float moveDitectionRange = 5f;
+
     void Start()
     {
-
-        farwordSpeed = 0f;
+                farwordSpeed = 0f;
         rb = GetComponent<Rigidbody2D>();
         timer = 5;
         uiManager = FindObjectOfType<UIManager>();
+            }
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
-
-        timer -= Time.deltaTime;
+                timer -= Time.deltaTime;
         transform.Translate(Vector3.up * farwordSpeed * Time.deltaTime);
         transform.Rotate(0, 0, rotationSpeed);
-
-        if (timer <= 0)
+                if (timer <= 0)
         {
-            Debug.Log("timesup");
-
-            ChangeAngle();
+                      ChangeAngle();
             timer = 5;
         }
-
-
-
     }
 
     private void FixedUpdate()
     {
-
-        hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.up), 0.4f);
-
-        if (hit.collider != null && hit.collider.tag == "Wall")
+                hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.up), 0.4f);
+                if (hit.collider != null && hit.collider.tag == "Wall")
         {
-
-
-            Debug.Log("raycastWorked");
             transform.Rotate(0, 0, transform.rotation.z + hitWallRotation);
-
-        }
-
-
-
-
+                    }
     }
 
     private void OnDrawGizmos()
     {
-
-        Gizmos.color = Color.red;
+                Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, transform.TransformDirection(Vector3.up) * moveDitectionRange);
     }
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -115,17 +88,17 @@ public class StarMovement : MonoBehaviour
         farwordSpeed = 1f;
         foundedStars++;
         Debug.Log(foundedStars);
-        if(foundedStars <= 11)
+        if (foundedStars <= 11)
         {
             GameManager.Instance.PlaySFX("SratFound");
 
         }
 
-        if(foundedStars == 11)
+        if (foundedStars == 11)
         {
             Debug.Log("counted 11 stars");
             uiManager.OpenMiddlePanel();
-           
+
         }
 
     }

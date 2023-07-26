@@ -203,6 +203,7 @@ Transform:
   m_Children:
   - {fileID: 3556880380886274916}
   - {fileID: 4927751302729826355}
+  - {fileID: 4935414479878609524}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -239,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d4af89cef0d1c48b1703f1061a7ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiManager: {fileID: 0}
   rb: {fileID: -509134414253268579}
   farwordSpeed: 2
   rotationSpeed: 0.2
@@ -246,7 +248,6 @@ MonoBehaviour:
   timer: 5
   hitWallRotation: 180
   moveDitectionRange: 2
-  uiManager: {fileID: 0}
 --- !u!58 &1544083308305492911
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -275,9 +276,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49359e31a8b4af64a98db341f7bc3e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInPlace: 0
   starInPlaceEffect: {fileID: 8041846498237561668, guid: a332e9d8f8bf8a049934fb974b16c84d, type: 3}
   pauseStar: 20
+  firstTouchEffect: {fileID: 4947770402924399425}
+  isInPlace: 0
+  hasTouched: 0
 --- !u!95 &6664490055643856698
 Animator:
   serializedVersion: 4
@@ -298,3 +301,74 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &2772804053330310418
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6958526528266050272}
+    m_Modifications:
+    - target: {fileID: 7063024972456783718, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063024972456783718, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063024972456783718, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063024972456783718, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063024972456783718, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063024972456783718, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063024972456783718, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063024972456783718, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063024972456783718, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063024972456783718, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7063024972456783718, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120464170356850259, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154946652627761916, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+      propertyPath: m_Name
+      value: First touch particle system
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+--- !u!4 &4935414479878609524 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7063024972456783718, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+  m_PrefabInstance: {fileID: 2772804053330310418}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4947770402924399425 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7120464170356850259, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+  m_PrefabInstance: {fileID: 2772804053330310418}
+  m_PrefabAsset: {fileID: 0}

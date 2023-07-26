@@ -83,8 +83,19 @@ public class UIManager : MonoBehaviour
             currectIntroText = introText[1];
             introText[0].SetActive(false);
         }
+        else if (introText[3].activeSelf)
+        {
+            UIPanels[7].SetActive(true);
+            currentTextIndex++;
+        }
+        else if (introText[4].activeSelf)
+        {
+            UIPanels[7].SetActive(false);
+            currentTextIndex++;
+        }
         else if (introText[5].activeSelf)
         {
+            
             StartGame();
         }
         else

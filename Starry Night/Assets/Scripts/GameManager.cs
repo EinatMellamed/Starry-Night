@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] Animator treeAnim;
     [SerializeField] GameObject moonAlart;
 
+    [SerializeField] GameObject pauseButton;
+    [SerializeField] GameObject mainMenuButton;
+
     [SerializeField] bool gameIsWon;
     [SerializeField] bool firstWind;
     [SerializeField] bool moonIsTouched;
@@ -70,6 +73,7 @@ public class GameManager : MonoBehaviour
             WinEffect();
             uiManager.OpenWinPanel();
             timer = 1f;
+            
         }
     }
     public bool AllStarsInPlace()
@@ -93,6 +97,9 @@ public class GameManager : MonoBehaviour
             Destroy(starWinEffect, 6);
             star.gameObject.SetActive(false);
         }
+        pauseButton.SetActive(false);
+        mainMenuButton.SetActive(true);
+
     }
 
     public void ActivateStars()
@@ -173,7 +180,7 @@ public class GameManager : MonoBehaviour
             }
             moonIsTouched = false;
         }
-        timer = 10f;
+        timer = 30f;
         if (firstWind)
         {
             uiManager.OpenWindPanel();

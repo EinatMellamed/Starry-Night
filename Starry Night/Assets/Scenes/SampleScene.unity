@@ -624,6 +624,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116131809}
   m_CullTransparentMesh: 1
+--- !u!1 &117229254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7224397737702803718, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+  m_PrefabInstance: {fileID: 3930117392257888028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &119327130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,10 +1816,11 @@ MonoBehaviour:
   paintingWithOutStars: {fileID: 1657881156}
   uiManager: {fileID: 0}
   treeAnim: {fileID: 1521623841}
+  moonAlart: {fileID: 117229254}
   gameIsWon: 0
   firstWind: 0
   moonIsTouched: 0
-  timer: 45
+  timer: 20
 --- !u!4 &422136612
 Transform:
   m_ObjectHideFlags: 0
@@ -5907,11 +5913,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6958526528266050272, guid: a0c9daa8b6434c6418f721268822cbb2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.98
+      value: 19.45
       objectReference: {fileID: 0}
     - target: {fileID: 6958526528266050272, guid: a0c9daa8b6434c6418f721268822cbb2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.27
+      value: -3.55
       objectReference: {fileID: 0}
     - target: {fileID: 6958526528266050272, guid: a0c9daa8b6434c6418f721268822cbb2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7186,68 +7192,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6958526528266050272, guid: a0c9daa8b6434c6418f721268822cbb2, type: 3}
   m_PrefabInstance: {fileID: 1177054127}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1901298243
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1901298246}
-  - component: {fileID: 1901298245}
-  - component: {fileID: 1901298244}
-  m_Layer: 0
-  m_Name: Moon holding point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1901298244
+--- !u!114 &1901298244 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3930117393586466136, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+  m_PrefabInstance: {fileID: 3930117392257888028}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901298243}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8804c97cdd2e5f84f978f394a877ac93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchMoon: 0
---- !u!58 &1901298245
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901298243}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.21270537}
-  serializedVersion: 2
-  m_Radius: 1.6432898
---- !u!4 &1901298246
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901298243}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.8, y: 6.8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1914090618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9578,6 +9533,71 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 381bd0d19b495d4429f2ada197ccf163, type: 3}
+--- !u!1001 &3930117392257888028
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3930117393586466138, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930117393586466138, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930117393586466138, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930117393586466138, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930117393586466138, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930117393586466138, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930117393586466138, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930117393586466138, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930117393586466138, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930117393586466138, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930117393586466138, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3930117393586466143, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+      propertyPath: m_Name
+      value: Moon holding point
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678198593256403675, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678198593256403675, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.32
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9fdcced1f90b5864384798cd6301da78, type: 3}
 --- !u!1001 &5394495677516038476
 PrefabInstance:
   m_ObjectHideFlags: 0

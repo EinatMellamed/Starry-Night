@@ -284,6 +284,7 @@ MonoBehaviour:
   trailDuration: 3
   ease: 4
   scorePos: {fileID: 5556569264312326697, guid: 4b1d229da97c14b4097078a459526bb8, type: 3}
+  scoreParticles: {fileID: 0}
   isInPlace: 0
   hasTouched: 0
 --- !u!95 &6664490055643856698

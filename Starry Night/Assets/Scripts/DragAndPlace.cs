@@ -19,6 +19,9 @@ public class DragAndPlace : MonoBehaviour
     [SerializeField] Ease ease;
     public Transform scorePos;
 
+    public ParticleSystem scoreParticles;
+    public Animator scoreAnim;
+
     public bool isInPlace = false;
     private bool isDragging = false;
     [SerializeField] private bool hasTouched = false;
@@ -60,7 +63,7 @@ public class DragAndPlace : MonoBehaviour
                 {
                     transform.position = collider.transform.position;
                     StartCoroutine(CreateTrail());
-                  //  scoreCounter.AddScore();
+                 
                     StartCoroutine(PauseMovement(pauseStar));
                     
                     isInPlace = true;
@@ -104,8 +107,10 @@ public class DragAndPlace : MonoBehaviour
 
          myTrail.transform.DOMove(scorePos.position, trailDuration).SetEase(ease);
         yield return new WaitForSeconds(trailDuration-0.3f);
+        scoreAnim.SetTrigger("score");
+        scoreParticles.Play();
         scoreCounter.AddScore();
-
+       
         Destroy(myTrail, 6);
         yield return null;
 

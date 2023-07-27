@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using DG.Tweening;
+
 
 
 public class DragAndPlace : MonoBehaviour
@@ -11,6 +13,11 @@ public class DragAndPlace : MonoBehaviour
     [SerializeField] float pauseStar;
     [SerializeField] ParticleSystem firstTouchEffect;
     [SerializeField] ScoreCounter scoreCounter;
+    
+    [SerializeField] GameObject trail;
+    [SerializeField] float trailDuration;
+    [SerializeField] Ease ease;
+    public Transform scorePos;
 
     public bool isInPlace = false;
     private bool isDragging = false;
@@ -23,6 +30,7 @@ public class DragAndPlace : MonoBehaviour
     private void Start()
     {
         scoreCounter = FindObjectOfType<ScoreCounter>();
+       
     }
 
     private void OnMouseDown()
@@ -51,7 +59,8 @@ public class DragAndPlace : MonoBehaviour
                 if (collider.CompareTag("StarPlace"))
                 {
                     transform.position = collider.transform.position;
-                    scoreCounter.AddScore();
+                    StartCoroutine(CreateTrail());
+                  //  scoreCounter.AddScore();
                     StartCoroutine(PauseMovement(pauseStar));
                     
                     isInPlace = true;
@@ -88,6 +97,18 @@ public class DragAndPlace : MonoBehaviour
         yield return new WaitForSeconds(duration);
         isInPlace = false;
         this.GetComponent<StarMovement>().farwordSpeed = 2f;
+    }
+    private IEnumerator CreateTrail()
+    {
+        GameObject myTrail = Instantiate(trail, transform.position, Quaternion.identity);
+
+         myTrail.transform.DOMove(scorePos.position, trailDuration).SetEase(ease);
+        yield return new WaitForSeconds(trailDuration);
+        scoreCounter.AddScore();
+
+        Destroy(myTrail, 6);
+        yield return null;
+
     }
 
    

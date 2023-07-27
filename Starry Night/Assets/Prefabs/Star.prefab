@@ -279,6 +279,11 @@ MonoBehaviour:
   starInPlaceEffect: {fileID: 8041846498237561668, guid: a332e9d8f8bf8a049934fb974b16c84d, type: 3}
   pauseStar: 20
   firstTouchEffect: {fileID: 4947770402924399425}
+  scoreCounter: {fileID: 0}
+  trail: {fileID: 5282931395423596236, guid: 03e446aefa4d99f4aabfbce45610c895, type: 3}
+  trailDuration: 3
+  ease: 4
+  scorePos: {fileID: 5556569264312326697, guid: 4b1d229da97c14b4097078a459526bb8, type: 3}
   isInPlace: 0
   hasTouched: 0
 --- !u!95 &6664490055643856698

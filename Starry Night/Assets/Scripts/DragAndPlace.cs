@@ -4,18 +4,26 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
 public class DragAndPlace : MonoBehaviour
 {
     [SerializeField] GameObject starInPlaceEffect;
     [SerializeField] float pauseStar;
     [SerializeField] ParticleSystem firstTouchEffect;
+    [SerializeField] ScoreCounter scoreCounter;
 
     public bool isInPlace = false;
     private bool isDragging = false;
     [SerializeField] private bool hasTouched = false;
 
+
+
     private Vector3 offset;
 
+    private void Start()
+    {
+        scoreCounter = FindObjectOfType<ScoreCounter>();
+    }
 
     private void OnMouseDown()
     {
@@ -43,8 +51,11 @@ public class DragAndPlace : MonoBehaviour
                 if (collider.CompareTag("StarPlace"))
                 {
                     transform.position = collider.transform.position;
+                    scoreCounter.AddScore();
                     StartCoroutine(PauseMovement(pauseStar));
+                    
                     isInPlace = true;
+
                     break;
                 }
             }

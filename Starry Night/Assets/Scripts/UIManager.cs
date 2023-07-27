@@ -65,6 +65,7 @@ public class UIManager : MonoBehaviour
     {
         CloseAllUIPanels();
         UIPanels[5].SetActive(true);
+        UIPanels[8].SetActive(true);
         gameManager.ActivateStars();
         GameManager.Instance.PlayMusic("GameTheme");
     }
@@ -117,6 +118,8 @@ public class UIManager : MonoBehaviour
         }
         CloseAllUIPanels();
         UIPanels[2].SetActive(true);
+        UIPanels[8].SetActive(true);
+
     }
     public void OpenWinPanel()
     {
@@ -131,6 +134,7 @@ public class UIManager : MonoBehaviour
     {
         CloseAllUIPanels();
         UIPanels[4].SetActive(true);
+        UIPanels[8].SetActive(true);
         Time.timeScale = 0f;
         GameManager.Instance.musicSource.volume = 0.2f;
     }
@@ -144,6 +148,7 @@ public class UIManager : MonoBehaviour
     {
         CloseAllUIPanels();
         UIPanels[5].SetActive(true);
+        UIPanels[8].SetActive(true);
         Time.timeScale = 1f;
         GameManager.Instance.musicSource.volume = 0.5f;
     }
@@ -156,6 +161,7 @@ public class UIManager : MonoBehaviour
     public void OpenWindPanel()
     {
         CloseAllUIPanels();
+        UIPanels[8].SetActive(true);
         UIPanels[6].SetActive(true);
     }
 }

@@ -103,7 +103,7 @@ public class DragAndPlace : MonoBehaviour
         GameObject myTrail = Instantiate(trail, transform.position, Quaternion.identity);
 
          myTrail.transform.DOMove(scorePos.position, trailDuration).SetEase(ease);
-        yield return new WaitForSeconds(trailDuration);
+        yield return new WaitForSeconds(trailDuration-0.3f);
         scoreCounter.AddScore();
 
         Destroy(myTrail, 6);

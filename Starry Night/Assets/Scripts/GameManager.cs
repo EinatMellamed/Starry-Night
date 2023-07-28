@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] float timer = 60f;
 
-    [SerializeField] GameObject trail;
+    
     [SerializeField] float trailDuration;
     
     [SerializeField] Transform scorePos;

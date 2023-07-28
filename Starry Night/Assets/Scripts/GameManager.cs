@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -31,6 +32,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] bool moonIsTouched;
 
     [SerializeField] float timer = 60f;
+
+    [SerializeField] GameObject trail;
+    [SerializeField] float trailDuration;
+    
+    [SerializeField] Transform scorePos;
+    [SerializeField] ScoreCounter scoreCounter;
+    [SerializeField] ParticleSystem scoreParticles;
+    [SerializeField] Animator scoreAnim;
 
     private void Awake()
     {
@@ -186,5 +195,18 @@ public class GameManager : MonoBehaviour
             uiManager.OpenWindPanel();
             firstWind = false;
         }
+    }
+
+    public IEnumerator AddScoreWithEffects()
+    {
+       
+        yield return new WaitForSeconds(trailDuration  - 0.3f);
+         scoreAnim.SetTrigger("score");
+         scoreParticles.Play();
+        scoreCounter.AddScore();
+
+       
+        
+
     }
 }

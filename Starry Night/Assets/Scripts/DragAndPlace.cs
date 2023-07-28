@@ -4,6 +4,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using TMPro;
 
 
 
@@ -12,15 +13,15 @@ public class DragAndPlace : MonoBehaviour
     [SerializeField] GameObject starInPlaceEffect;
     [SerializeField] float pauseStar;
     [SerializeField] ParticleSystem firstTouchEffect;
-    [SerializeField] ScoreCounter scoreCounter;
-    
-    [SerializeField] GameObject trail;
-    [SerializeField] float trailDuration;
-    [SerializeField] Ease ease;
-    public Transform scorePos;
 
-    public ParticleSystem scoreParticles;
-    public Animator scoreAnim;
+    [SerializeField] GameObject trail;
+    [SerializeField] float trailDuration2;
+    [SerializeField] Ease ease;
+
+
+
+
+
 
     public bool isInPlace = false;
     private bool isDragging = false;
@@ -30,11 +31,7 @@ public class DragAndPlace : MonoBehaviour
 
     private Vector3 offset;
 
-    private void Start()
-    {
-        scoreCounter = FindObjectOfType<ScoreCounter>();
-       
-    }
+   
 
     private void OnMouseDown()
     {
@@ -62,8 +59,8 @@ public class DragAndPlace : MonoBehaviour
                 if (collider.CompareTag("StarPlace"))
                 {
                     transform.position = collider.transform.position;
+                    StartCoroutine(GameManager.Instance.AddScoreWithEffects());
                     StartCoroutine(CreateTrail());
-                 
                     StartCoroutine(PauseMovement(pauseStar));
                     
                     isInPlace = true;
@@ -101,20 +98,16 @@ public class DragAndPlace : MonoBehaviour
         isInPlace = false;
         this.GetComponent<StarMovement>().farwordSpeed = 2f;
     }
-    private IEnumerator CreateTrail()
+
+    public IEnumerator CreateTrail()
     {
         GameObject myTrail = Instantiate(trail, transform.position, Quaternion.identity);
 
-         myTrail.transform.DOMove(scorePos.position, trailDuration).SetEase(ease);
-        yield return new WaitForSeconds(trailDuration-0.3f);
-        scoreAnim.SetTrigger("score");
-        scoreParticles.Play();
-        scoreCounter.AddScore();
-       
+        myTrail.transform.DOMove(new Vector3(15.04f, 9.29f, 0f), trailDuration2).SetEase(ease);
+        
         Destroy(myTrail, 6);
         yield return null;
 
     }
 
-   
 }

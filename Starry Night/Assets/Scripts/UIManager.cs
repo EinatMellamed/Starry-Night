@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameManager gameManager;
     [SerializeField] Animator animator;
     [SerializeField] Animator scoreWindowAnim;
+  
 
     private int currentTextIndex;
     [SerializeField] GameObject currectIntroText;
@@ -167,5 +168,14 @@ public class UIManager : MonoBehaviour
         CloseAllUIPanels();
         UIPanels[8].SetActive(true);
         UIPanels[6].SetActive(true);
+    }
+
+    public void CloseWinPanel()
+    {
+
+        CloseAllUIPanels();
+                UIPanels[5].SetActive(true);
+        GameManager.Instance.PlayMusic("CoverTheme");
+        GameManager.Instance.musicSource.loop = true;
     }
 }

@@ -200,9 +200,12 @@ public class GameManager : MonoBehaviour
     public IEnumerator AddScoreWithEffects()
     {
        
-        yield return new WaitForSeconds(trailDuration  - 0.3f);
-         scoreAnim.SetTrigger("score");
-         scoreParticles.Play();
+        yield return new WaitForSeconds(trailDuration);
+       // scoreAnim.SetTrigger("score");
+        yield return new WaitForSeconds(0.02f);
+        
+        scoreParticles.Play();
+        yield return new WaitForSeconds(0.02f);
         scoreCounter.AddScore();
 
        

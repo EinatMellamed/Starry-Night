@@ -21,7 +21,7 @@ public class DragAndPlace : MonoBehaviour
 
 
 
-
+    
 
     public bool isInPlace = false;
     private bool isDragging = false;
@@ -59,10 +59,11 @@ public class DragAndPlace : MonoBehaviour
                 if (collider.CompareTag("StarPlace"))
                 {
                     transform.position = collider.transform.position;
-                    StartCoroutine(GameManager.Instance.AddScoreWithEffects());
-                    StartCoroutine(CreateTrail());
+
+                      StartCoroutine(CreateTrail());
+
+                      StartCoroutine(GameManager.Instance.AddScoreWithEffects());
                     StartCoroutine(PauseMovement(pauseStar));
-                    
                     isInPlace = true;
 
                     break;
@@ -110,4 +111,6 @@ public class DragAndPlace : MonoBehaviour
 
     }
 
+
+   
 }

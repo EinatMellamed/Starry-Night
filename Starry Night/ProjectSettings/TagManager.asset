@@ -54,3 +54,6 @@ TagManager:
   - name: ui particles
     uniqueID: 1413320779
     locked: 0
+  - name: vignette effect
+    uniqueID: 3015344977
+    locked: 0

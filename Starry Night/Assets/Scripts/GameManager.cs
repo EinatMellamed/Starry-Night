@@ -40,6 +40,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] ScoreCounter scoreCounter;
     [SerializeField] ParticleSystem scoreParticles;
     [SerializeField] Animator scoreAnim;
+    [SerializeField] ParticleSystem winScoreParticles;
+
+
 
     private void Awake()
     {
@@ -108,6 +111,7 @@ public class GameManager : MonoBehaviour
         }
         pauseButton.SetActive(false);
         mainMenuButton.SetActive(true);
+        TextWinAnimation();
 
     }
 
@@ -201,7 +205,7 @@ public class GameManager : MonoBehaviour
     {
        
         yield return new WaitForSeconds(trailDuration);
-       // scoreAnim.SetTrigger("score");
+        scoreAnim.SetTrigger("score");
         yield return new WaitForSeconds(0.02f);
         
         scoreParticles.Play();
@@ -211,5 +215,12 @@ public class GameManager : MonoBehaviour
        
         
 
+    }
+
+    private async void TextWinAnimation()
+    {
+        await Task.Delay(1700);
+        scoreAnim.SetTrigger("score");
+        winScoreParticles.Play();
     }
 }

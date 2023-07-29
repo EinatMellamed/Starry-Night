@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] List<GameObject> backgroundElements = new List<GameObject>();
     [SerializeField] GameManager gameManager;
     [SerializeField] Animator animator;
+    [SerializeField] Animator scoreWindowAnim;
 
     private int currentTextIndex;
     [SerializeField] GameObject currectIntroText;
@@ -121,12 +122,15 @@ public class UIManager : MonoBehaviour
         UIPanels[8].SetActive(true);
 
     }
-    public void OpenWinPanel()
+    public async void OpenWinPanel()
     {
         CloseAllUIPanels();
         UIPanels[3].SetActive(true);
+        UIPanels[8].SetActive(true);
+        scoreWindowAnim.SetTrigger("game won");
         GameManager.Instance.PlayMusic("VictoryTheme");
         GameManager.Instance.musicSource.loop = false;
+        await Task.Delay(7000);
         Time.timeScale = 0f;
     }
 

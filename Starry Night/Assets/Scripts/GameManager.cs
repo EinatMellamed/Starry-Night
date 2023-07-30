@@ -78,16 +78,21 @@ public class GameManager : MonoBehaviour
             musicSource.volume = Mathf.Lerp(musicSource.volume, 0.3f, Time.deltaTime);
         }
         if (timer <= 0) ActivateWind();
-       
+        if(AllStarsInPlace() && gameIsWon)
+        {
+          
+            timer = 10f;
+        }
+        if (gameIsWon) return;
         if (AllStarsInPlace())
         {
             gameIsWon = true;
             WinEffect();
             uiManager.OpenWinPanel();
-            timer = 15f;
+            
             
         }
-        if (gameIsWon) return;
+       
     }
     public bool AllStarsInPlace()
     {

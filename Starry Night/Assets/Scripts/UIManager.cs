@@ -181,6 +181,8 @@ public class UIManager : MonoBehaviour
         UIPanels[5].SetActive(true);
         GameManager.Instance.PlayMusic("CoverTheme");
         GameManager.Instance.musicSource.loop = true;
-        Time.timeScale = 1f;
+        
     }
+
+    
 }

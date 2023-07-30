@@ -88,13 +88,13 @@ public class StarMovement : MonoBehaviour
         farwordSpeed = 1f;
         foundedStars++;
         Debug.Log(foundedStars);
-        if (foundedStars <= 11)
+        if (foundedStars <= 5)
         {
             GameManager.Instance.PlaySFX("SratFound");
 
         }
 
-        if (foundedStars == 11)
+        if (foundedStars == 5)
         {
             Debug.Log("counted 11 stars");
             uiManager.OpenMiddlePanel();

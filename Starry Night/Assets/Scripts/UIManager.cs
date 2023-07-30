@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] List<GameObject> introText = new List<GameObject>();
     [SerializeField] List<GameObject> backgroundElements = new List<GameObject>();
     [SerializeField] GameManager gameManager;
+    [SerializeField] GameObject starsHolder;
     [SerializeField] Animator animator;
     [SerializeField] Animator scoreWindowAnim;
   
@@ -21,6 +22,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        starsHolder.SetActive(false);
         animator = UIPanels[0].GetComponent<Animator>();
         GameManager.Instance.PlayMusic("CoverTheme");
         GameManager.Instance.musicSource.volume = 0.5f;
@@ -65,6 +67,7 @@ public class UIManager : MonoBehaviour
 
     public void StartGame()
     {
+        starsHolder.SetActive(false);
         CloseAllUIPanels();
         UIPanels[5].SetActive(true);
         UIPanels[8].SetActive(true);
@@ -172,7 +175,7 @@ public class UIManager : MonoBehaviour
 
     public void CloseWinPanel()
     {
-
+        Debug.Log("watching painting");
         CloseAllUIPanels();
                 UIPanels[5].SetActive(true);
         GameManager.Instance.PlayMusic("CoverTheme");

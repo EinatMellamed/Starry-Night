@@ -78,15 +78,16 @@ public class GameManager : MonoBehaviour
             musicSource.volume = Mathf.Lerp(musicSource.volume, 0.3f, Time.deltaTime);
         }
         if (timer <= 0) ActivateWind();
-        if (gameIsWon) return;
+       
         if (AllStarsInPlace())
         {
             gameIsWon = true;
             WinEffect();
             uiManager.OpenWinPanel();
-            timer = 1f;
+            timer = 15f;
             
         }
+        if (gameIsWon) return;
     }
     public bool AllStarsInPlace()
     {
@@ -193,6 +194,7 @@ public class GameManager : MonoBehaviour
             }
             moonIsTouched = false;
         }
+
         timer = 30f;
         if (firstWind)
         {

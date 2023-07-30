@@ -13,6 +13,7 @@ public class DragAndPlace : MonoBehaviour
     [SerializeField] GameObject starInPlaceEffect;
     [SerializeField] float pauseStar;
     [SerializeField] ParticleSystem firstTouchEffect;
+    [SerializeField] Animator starAnim;
 
     [SerializeField] GameObject trail;
     [SerializeField] float trailDuration2;
@@ -38,6 +39,7 @@ public class DragAndPlace : MonoBehaviour
         if(!hasTouched)
         {
             firstTouchEffect.Play();
+            starAnim.SetTrigger("firstTouch");
             hasTouched = true;
         }
            

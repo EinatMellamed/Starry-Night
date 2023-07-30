@@ -279,6 +279,7 @@ MonoBehaviour:
   starInPlaceEffect: {fileID: 8041846498237561668, guid: a332e9d8f8bf8a049934fb974b16c84d, type: 3}
   pauseStar: 20
   firstTouchEffect: {fileID: 4947770402924399425}
+  starAnim: {fileID: 6664490055643856698}
   trail: {fileID: 5282931395423596236, guid: 03e446aefa4d99f4aabfbce45610c895, type: 3}
   trailDuration2: 1.5
   ease: 4

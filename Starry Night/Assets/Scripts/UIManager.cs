@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject starsHolder;
     [SerializeField] Animator animator;
     [SerializeField] Animator scoreWindowAnim;
-  
+
 
     private int currentTextIndex;
     [SerializeField] GameObject currectIntroText;
@@ -37,7 +37,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        
+
     }
 
     public void CloseAllUIPanels()
@@ -67,7 +67,7 @@ public class UIManager : MonoBehaviour
 
     public void StartGame()
     {
-        starsHolder.SetActive(false);
+        starsHolder.SetActive(true);
         CloseAllUIPanels();
         UIPanels[5].SetActive(true);
         UIPanels[8].SetActive(true);
@@ -102,7 +102,7 @@ public class UIManager : MonoBehaviour
         }
         else if (introText[5].activeSelf)
         {
-            
+
             StartGame();
         }
         else
@@ -117,10 +117,7 @@ public class UIManager : MonoBehaviour
 
     public void OpenMiddlePanel()
     {
-        foreach (GameObject element in backgroundElements)
-        {
-            element.SetActive(false);
-        }
+        
         CloseAllUIPanels();
         UIPanels[2].SetActive(true);
         UIPanels[8].SetActive(true);
@@ -168,6 +165,10 @@ public class UIManager : MonoBehaviour
 
     public void OpenWindPanel()
     {
+        foreach (GameObject element in backgroundElements)
+        {
+            element.SetActive(false);
+        }
         CloseAllUIPanels();
         UIPanels[8].SetActive(true);
         UIPanels[6].SetActive(true);
@@ -175,10 +176,11 @@ public class UIManager : MonoBehaviour
 
     public void CloseWinPanel()
     {
-        Debug.Log("watching painting");
+      
         CloseAllUIPanels();
-                UIPanels[5].SetActive(true);
+        UIPanels[5].SetActive(true);
         GameManager.Instance.PlayMusic("CoverTheme");
         GameManager.Instance.musicSource.loop = true;
+        Time.timeScale = 1f;
     }
 }

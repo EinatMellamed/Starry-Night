@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject starsHolder;
     [SerializeField] Animator animator;
     [SerializeField] Animator scoreWindowAnim;
+    [SerializeField] Animator winPanel;
+    [SerializeField] Animator scoreTextAnim;
 
 
     private int currentTextIndex;
@@ -35,18 +37,14 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    private void Update()
-    {
-
-    }
-
     public void CloseAllUIPanels()
     {
         foreach (GameObject panel in UIPanels)
         {
             panel.SetActive(false);
-            Time.timeScale = 1f;
+           
         }
+        Time.timeScale = 1f;
     }
 
     public async void OpenInstructionPanel1()
@@ -133,6 +131,15 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.musicSource.loop = false;
         await Task.Delay(7000);
         Time.timeScale = 0f;
+        scoreWindowAnim.SetTrigger("needsToFade");
+       winPanel.SetTrigger("needsToFade");
+       scoreTextAnim.SetTrigger("needsToFade");
+        GameManager.Instance.PlayMusic("CoverTheme");
+        GameManager.Instance.musicSource.loop = true; 
+        await Task.Delay(1000);
+        UIPanels[3].SetActive(false);
+        UIPanels[8].SetActive(false);
+        UIPanels[5].SetActive(true);
     }
 
     public void OpenMainMenuPanel()
@@ -151,9 +158,15 @@ public class UIManager : MonoBehaviour
 
     public void ResumeGame()
     {
+      
         CloseAllUIPanels();
+       
         UIPanels[5].SetActive(true);
         UIPanels[8].SetActive(true);
+        if (GameManager.Instance.gameIsWon)
+        {
+            UIPanels[8].SetActive(false);
+        }
         Time.timeScale = 1f;
         GameManager.Instance.musicSource.volume = 0.5f;
     }
@@ -177,11 +190,11 @@ public class UIManager : MonoBehaviour
     public void CloseWinPanel()
     {
       
-        CloseAllUIPanels();
+       CloseAllUIPanels();
         UIPanels[5].SetActive(true);
         GameManager.Instance.PlayMusic("CoverTheme");
         GameManager.Instance.musicSource.loop = true;
-        
+       
     }
 
     

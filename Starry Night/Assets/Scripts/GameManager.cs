@@ -27,15 +27,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject pauseButton;
     [SerializeField] GameObject mainMenuButton;
 
-    [SerializeField] bool gameIsWon;
+    public bool gameIsWon;
     [SerializeField] bool firstWind;
     [SerializeField] bool moonIsTouched;
 
     [SerializeField] float timer = 60f;
 
-    
+
     [SerializeField] float trailDuration;
-    
+
     [SerializeField] Transform scorePos;
     [SerializeField] ScoreCounter scoreCounter;
     [SerializeField] ParticleSystem scoreParticles;
@@ -78,21 +78,16 @@ public class GameManager : MonoBehaviour
             musicSource.volume = Mathf.Lerp(musicSource.volume, 0.3f, Time.deltaTime);
         }
         if (timer <= 0) ActivateWind();
-        if(AllStarsInPlace() && gameIsWon)
-        {
-          
-            timer = 10f;
-        }
         if (gameIsWon) return;
         if (AllStarsInPlace())
         {
             gameIsWon = true;
             WinEffect();
             uiManager.OpenWinPanel();
-            
-            
+            treeAnim.SetTrigger("gameIsWon");
+
         }
-       
+
     }
     public bool AllStarsInPlace()
     {
@@ -175,7 +170,7 @@ public class GameManager : MonoBehaviour
     {
         wind.SetActive(true);
         moonAlart.SetActive(false);
-       
+
         if (!moon.touchMoon)
         {
             foreach (GameObject star in stars)
@@ -188,7 +183,7 @@ public class GameManager : MonoBehaviour
         await Task.Delay(3000);
         treeAnim.SetBool("aboutToWind", false);
         wind.SetActive(false);
-        musicSource.volume =Mathf.Lerp(musicSource.volume, 0.5f, Time.deltaTime);
+        musicSource.volume = Mathf.Lerp(musicSource.volume, 0.5f, Time.deltaTime);
 
         if (!moon.touchMoon && moonIsTouched)
         {
@@ -210,17 +205,17 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator AddScoreWithEffects()
     {
-       
+
         yield return new WaitForSeconds(trailDuration);
         scoreAnim.SetTrigger("score");
         yield return new WaitForSeconds(0.02f);
-        
+
         scoreParticles.Play();
         yield return new WaitForSeconds(0.02f);
         scoreCounter.AddScore();
 
-       
-        
+
+
 
     }
 

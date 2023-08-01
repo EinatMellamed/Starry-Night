@@ -42,8 +42,8 @@ public class DragAndPlace : MonoBehaviour
             starAnim.SetTrigger("firstTouch");
             hasTouched = true;
         }
-           
-         
+
+        starAnim.SetBool("inTouchMode", true);
 
         isDragging = true;
         offset = transform.position - GetMouseWorldPosition();
@@ -51,6 +51,7 @@ public class DragAndPlace : MonoBehaviour
    
     private void OnMouseUp()
     {
+        starAnim.SetBool("inTouchMode", false);
         if (isDragging)
         {
             isDragging = false;

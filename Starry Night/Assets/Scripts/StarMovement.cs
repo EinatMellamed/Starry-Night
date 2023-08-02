@@ -20,36 +20,37 @@ public class StarMovement : MonoBehaviour
 
     void Start()
     {
-                farwordSpeed = 0f;
+        foundedStars = 0;
+        farwordSpeed = 0f;
         rb = GetComponent<Rigidbody2D>();
         timer = 5;
         uiManager = FindObjectOfType<UIManager>();
-            }
+    }
 
     void Update()
     {
-                timer -= Time.deltaTime;
+        timer -= Time.deltaTime;
         transform.Translate(Vector3.up * farwordSpeed * Time.deltaTime);
         transform.Rotate(0, 0, rotationSpeed);
-                if (timer <= 0)
+        if (timer <= 0)
         {
-                      ChangeAngle();
+            ChangeAngle();
             timer = 5;
         }
     }
 
     private void FixedUpdate()
     {
-                hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.up), 0.4f);
-                if (hit.collider != null && hit.collider.tag == "Wall")
+        hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.up), 0.4f);
+        if (hit.collider != null && hit.collider.tag == "Wall")
         {
             transform.Rotate(0, 0, transform.rotation.z + hitWallRotation);
-                    }
+        }
     }
 
     private void OnDrawGizmos()
     {
-                Gizmos.color = Color.red;
+        Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, transform.TransformDirection(Vector3.up) * moveDitectionRange);
     }
 

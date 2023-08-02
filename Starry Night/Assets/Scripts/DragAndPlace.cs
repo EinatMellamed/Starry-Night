@@ -18,6 +18,7 @@ public class DragAndPlace : MonoBehaviour
     [SerializeField] GameObject trail;
     [SerializeField] float trailDuration2;
     [SerializeField] Ease ease;
+    [SerializeField] GameObject scorePos;
 
 
 
@@ -32,7 +33,10 @@ public class DragAndPlace : MonoBehaviour
 
     private Vector3 offset;
 
-   
+    private void Start()
+    {
+        scorePos = GameObject.FindGameObjectWithTag("ScorePos");
+    }
 
     private void OnMouseDown()
     {
@@ -107,7 +111,7 @@ public class DragAndPlace : MonoBehaviour
     {
         GameObject myTrail = Instantiate(trail, transform.position, Quaternion.identity);
 
-        myTrail.transform.DOMove(new Vector3(15.04f, 9.29f, 0f), trailDuration2).SetEase(ease);
+        myTrail.transform.DOMove(scorePos.transform.position, trailDuration2).SetEase(ease);
         
         Destroy(myTrail, 6);
         yield return null;

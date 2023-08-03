@@ -13,6 +13,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] List<GameObject> backgroundElements = new List<GameObject>();
     [SerializeField] GameManager gameManager;
     [SerializeField] GameObject starsHolder;
+    [SerializeField] GameObject starExample;
+    [SerializeField] GameObject StarExampleArrow;
+    [SerializeField] GameObject introTextButton;
     [SerializeField] Animator animator;
     [SerializeField] Animator scoreWindowAnim;
     [SerializeField] Animator winPanel;
@@ -25,6 +28,9 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         starsHolder.SetActive(false);
+        starExample.SetActive(false);
+        StarExampleArrow.SetActive(false);
+        introTextButton.SetActive(true);
         animator = UIPanels[0].GetComponent<Animator>();
         GameManager.Instance.PlayMusic("CoverTheme");
         GameManager.Instance.musicSource.volume = 0.5f;
@@ -37,6 +43,16 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    private void Update()
+    {
+        if (starExample.GetComponent<DragAndPlace>().firstStarInPlace && introText[4].activeSelf)
+        {
+            introText[4].SetActive(false);
+            introText[5].SetActive(true);
+            introTextButton.SetActive(true);
+
+        }
+    }
     public void CloseAllUIPanels()
     {
         foreach (GameObject panel in UIPanels)
@@ -54,6 +70,7 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.PlayMusic("IntroTheme");
         CloseAllUIPanels();
         UIPanels[1].SetActive(true);
+        UIPanels[8].SetActive(true);
         Time.timeScale = 0f;
     }
     public void OpenInstructionPanel2()
@@ -90,18 +107,26 @@ public class UIManager : MonoBehaviour
         }
         else if (introText[3].activeSelf)
         {
-            UIPanels[7].SetActive(true);
-            currentTextIndex++;
-        }
-        else if (introText[4].activeSelf)
-        {
-            UIPanels[7].SetActive(false);
-            currentTextIndex++;
-        }
-        else if (introText[5].activeSelf)
-        {
+            starExample.SetActive(true);
+            StarExampleArrow.SetActive(true);
+            introTextButton.SetActive(false);
+           starExample.GetComponent<DragAndPlace>().starAnim.SetTrigger("firstTouch");
 
+            currentTextIndex++;
+            // UIPanels[7].SetActive(true);
+
+        }
+       
+        //  else if (introText[5].activeSelf)
+        // {
+        // UIPanels[7].SetActive(false);
+        //    currentTextIndex++;
+        // }
+        else if (introText[6].activeSelf)
+        {
+           
             StartGame();
+            starExample.SetActive(false);
         }
         else
         {

@@ -10,10 +10,11 @@ using TMPro;
 
 public class DragAndPlace : MonoBehaviour
 {
+    public bool firstStarInPlace;
     [SerializeField] GameObject starInPlaceEffect;
     [SerializeField] float pauseStar;
     [SerializeField] ParticleSystem firstTouchEffect;
-    [SerializeField] Animator starAnim;
+   public Animator starAnim;
 
     [SerializeField] GameObject trail;
     [SerializeField] float trailDuration2;
@@ -27,7 +28,7 @@ public class DragAndPlace : MonoBehaviour
 
     public bool isInPlace = false;
     private bool isDragging = false;
-    [SerializeField] private bool hasTouched = false;
+  [SerializeField] bool hasTouched = false;
 
 
 
@@ -45,6 +46,7 @@ public class DragAndPlace : MonoBehaviour
             firstTouchEffect.Play();
             starAnim.SetTrigger("firstTouch");
             hasTouched = true;
+          
         }
 
         starAnim.SetBool("inTouchMode", true);
@@ -55,16 +57,18 @@ public class DragAndPlace : MonoBehaviour
    
     private void OnMouseUp()
     {
+       
         starAnim.SetBool("inTouchMode", false);
         if (isDragging)
         {
             isDragging = false;
-
+            
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.5f);
             foreach (Collider2D collider in colliders)
             {
                 if (collider.CompareTag("StarPlace"))
                 {
+                    firstStarInPlace = true;
                     transform.position = collider.transform.position;
 
                       StartCoroutine(CreateTrail());
@@ -75,6 +79,7 @@ public class DragAndPlace : MonoBehaviour
 
                     break;
                 }
+              
             }
         }
     }
@@ -100,6 +105,7 @@ public class DragAndPlace : MonoBehaviour
         isDragging = false;
         this.GetComponent<StarMovement>().farwordSpeed = 0f;
         GameManager.Instance.PlaySFX("StarInPlace");
+        
         GameObject inPlaceEffect = Instantiate(starInPlaceEffect, transform.position, Quaternion.identity);
         Destroy(inPlaceEffect, 2);
         yield return new WaitForSeconds(duration);
@@ -109,8 +115,9 @@ public class DragAndPlace : MonoBehaviour
 
     public IEnumerator CreateTrail()
     {
+        Time.timeScale = 1f;
         GameObject myTrail = Instantiate(trail, transform.position, Quaternion.identity);
-
+      
         myTrail.transform.DOMove(scorePos.transform.position, trailDuration2).SetEase(ease);
         
         Destroy(myTrail, 6);

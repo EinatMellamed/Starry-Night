@@ -48,6 +48,7 @@ public class UIManager : MonoBehaviour
         if (starExample.GetComponent<DragAndPlace>().firstStarInPlace && introText[4].activeSelf)
         {
             introText[4].SetActive(false);
+            StarExampleArrow.SetActive(false);
             introText[5].SetActive(true);
             introTextButton.SetActive(true);
 

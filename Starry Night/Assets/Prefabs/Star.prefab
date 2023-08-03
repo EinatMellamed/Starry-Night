@@ -276,13 +276,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49359e31a8b4af64a98db341f7bc3e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstStarInPlace: 0
   starInPlaceEffect: {fileID: 8041846498237561668, guid: a332e9d8f8bf8a049934fb974b16c84d, type: 3}
-  pauseStar: 20
+  pauseStar: 15
   firstTouchEffect: {fileID: 4947770402924399425}
   starAnim: {fileID: 6664490055643856698}
   trail: {fileID: 5282931395423596236, guid: 03e446aefa4d99f4aabfbce45610c895, type: 3}
   trailDuration2: 1.5
   ease: 4
+  scorePos: {fileID: 0}
   isInPlace: 0
   hasTouched: 0
 --- !u!95 &6664490055643856698

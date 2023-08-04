@@ -180,8 +180,8 @@ GameObject:
   - component: {fileID: -509134414253268579}
   - component: {fileID: 7542221023964325804}
   - component: {fileID: 1544083308305492911}
-  - component: {fileID: 1827070228473747181}
   - component: {fileID: 6664490055643856698}
+  - component: {fileID: 4787211035224613330}
   m_Layer: 0
   m_Name: Star
   m_TagString: Star
@@ -264,29 +264,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.8525021
---- !u!114 &1827070228473747181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6407042358175313010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49359e31a8b4af64a98db341f7bc3e4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstStarInPlace: 0
-  starInPlaceEffect: {fileID: 8041846498237561668, guid: a332e9d8f8bf8a049934fb974b16c84d, type: 3}
-  pauseStar: 15
-  firstTouchEffect: {fileID: 4947770402924399425}
-  starAnim: {fileID: 6664490055643856698}
-  trail: {fileID: 5282931395423596236, guid: 03e446aefa4d99f4aabfbce45610c895, type: 3}
-  trailDuration2: 1.5
-  ease: 4
-  scorePos: {fileID: 0}
-  isInPlace: 0
-  hasTouched: 0
 --- !u!95 &6664490055643856698
 Animator:
   serializedVersion: 4
@@ -307,6 +284,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4787211035224613330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407042358175313010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b3e1a2c450132408a1c741232d8134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstStarInPlace: 0
+  starInPlaceEffect: {fileID: 8041846498237561668, guid: a332e9d8f8bf8a049934fb974b16c84d, type: 3}
+  pauseStar: 12
+  firstTouchEffect: {fileID: 7120464170356850259, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+  starAnim: {fileID: 6664490055643856698}
+  trail: {fileID: 5282931395423596236, guid: 03e446aefa4d99f4aabfbce45610c895, type: 3}
+  trailDuration2: 1.5
+  ease: 4
+  scorePos: {fileID: 6307540102305070092, guid: 4b1d229da97c14b4097078a459526bb8, type: 3}
+  isInPlace: 0
+  hasTouched: 0
 --- !u!1001 &2772804053330310418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -371,10 +371,5 @@ PrefabInstance:
 --- !u!4 &4935414479878609524 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7063024972456783718, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
-  m_PrefabInstance: {fileID: 2772804053330310418}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &4947770402924399425 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7120464170356850259, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
   m_PrefabInstance: {fileID: 2772804053330310418}
   m_PrefabAsset: {fileID: 0}

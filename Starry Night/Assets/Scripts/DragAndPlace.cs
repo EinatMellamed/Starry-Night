@@ -8,7 +8,7 @@ using TMPro;
 
 
 
-public class DragAndPlace : MonoBehaviour
+public abstract class DragAndPlace : MonoBehaviour
 {
     public bool firstStarInPlace;
     [SerializeField] GameObject starInPlaceEffect;
@@ -115,7 +115,7 @@ public class DragAndPlace : MonoBehaviour
 
     public IEnumerator CreateTrail()
     {
-        Time.timeScale = 1f;
+       // Time.timeScale = 1f;
         GameObject myTrail = Instantiate(trail, transform.position, Quaternion.identity);
       
         myTrail.transform.DOMove(scorePos.transform.position, trailDuration2).SetEase(ease);

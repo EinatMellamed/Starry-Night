@@ -17,7 +17,7 @@ TagManager:
   - UI
   - Stars
   - ScoreTrailEffect
-  - 
+  - Frame
   - 
   - 
   - 
@@ -42,11 +42,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Walls
-    uniqueID: 2649689109
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Walls
+    uniqueID: 2649689109
     locked: 0
   - name: Stars
     uniqueID: 3382985575
@@ -65,4 +65,7 @@ TagManager:
     locked: 0
   - name: Tree
     uniqueID: 3174935199
+    locked: 0
+  - name: Frame
+    uniqueID: 3376237733
     locked: 0

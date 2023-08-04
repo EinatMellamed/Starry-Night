@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DreamyGames
   productName: The Starry Night
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: e226b57d6e4c37045b3ed9ed7324ca55, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.06434674, g: 0.05197579, b: 0.1509434, a: 1}
   m_ShowUnitySplashScreen: 1

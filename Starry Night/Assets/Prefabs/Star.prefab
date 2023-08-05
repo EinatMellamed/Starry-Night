@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -911981721
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 9a8c30e996f868d4a89659af4181558a, type: 3}
   m_Color: {r: 1, g: 1, b: 0.6039216, a: 1}
@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 4776398084678296930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9375, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6958526528266050272}
@@ -155,7 +155,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -911981721
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 4e0f2602d08d77e4f8b3f51bab1897ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 7542221023964325804}
   - component: {fileID: 1544083308305492911}
   - component: {fileID: 6664490055643856698}
+  - component: {fileID: 8516515024613641721}
   - component: {fileID: 4787211035224613330}
   m_Layer: 0
   m_Name: Star
@@ -284,6 +285,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8516515024613641721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407042358175313010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0f9892b55c06c54bbc65b2d6d27d49b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorType: 0
+  anchorOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &4787211035224613330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +380,10 @@ PrefabInstance:
     - target: {fileID: 9154946652627761916, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
       propertyPath: m_Name
       value: First touch particle system
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154946652627761916, guid: 6d15799d53a977847984f6da12067ed6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d15799d53a977847984f6da12067ed6, type: 3}

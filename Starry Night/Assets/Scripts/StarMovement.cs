@@ -18,6 +18,8 @@ public class StarMovement : MonoBehaviour
     [SerializeField] float hitWallRotation = 140f;
     [SerializeField] float moveDitectionRange = 5f;
 
+    [SerializeField] CameraAnchor myCameraAnchor;
+
     void Start()
     {
         foundedStars = 0;
@@ -86,6 +88,7 @@ public class StarMovement : MonoBehaviour
 
     private void OnMouseDown()
     {
+        myCameraAnchor.enabled= false;
         farwordSpeed = 1f;
         foundedStars++;
         Debug.Log(foundedStars);
